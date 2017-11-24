@@ -53,6 +53,7 @@
 		11.1 Google map [1806]
 		11.2 Quick Contact [1817]
 		11.3 Contact Form [1857]
+        11.4 responsiveCalendar
 
 */
 /*================================= 1. font import  ===========================================*/
@@ -1489,26 +1490,23 @@ aside .tag-widget .tags a:hover {
 .contact-address .address-info .address-info-desc p {
   font-size: 13px; }
 
-/*-------------------------------  11.3 contact form ---------------------------*/
-.contact-form {
-  margin: 25px 0px 90px 0px; }
+/*-------------------------------  11.4 responsiveCalendar  ---------------------------*/
+.responsiveCal {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden; }
 
-.contact-form .headline .section-title,
-.contact-form .headline .section-sub-title {
-  text-transform: none; }
+.responsiveCal iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
-.contact-form .btn-black {
-  float: right;
-  margin-top: 20px; }
+/*------------------------  custom  -------------------------*/
+.tel {
+  font-size: 3em; }
 
-/*
-Theme Name: Avada Agency
-Theme URI: http://themewagon.com/demo/avada-agency-pro/
-Author: ThemeWagon
-Author URI: http://themewagon.com/
-Description: A multipurpose responsive theme for organization. Built with HTML5, CSS3, Bootstrap framework. Google fonts, Font Awesome Icon integrated
-Version: 1.0
-License: GNU General Public License v3
-License URI: http://www.gnu.org/licenses/gpl-3.0.txt
-Tags: responsive layout, multiple-page
-*/
+#normas li {
+  list-style-type: circle; }
