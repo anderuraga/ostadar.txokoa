@@ -25,7 +25,12 @@ gulp.task('sass', function() {
 gulp.task('html', function() {
     gulp.src([
                     'src/html/head.html',
-                    'src/html/index.html',
+                    'src/html/nav.html',
+                    'src/html/wellcome.html',
+                    'src/html/presentacion.html',
+                    'src/html/servicios.html',
+                    'src/html/precios.html',
+                    'src/html/reserva.html',
                     'src/html/footer.html'
                   ])
     .pipe(concat('index.html'))

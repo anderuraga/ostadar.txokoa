@@ -1,56 +1,100 @@
+<footer>
+    <div class="container">
+        <div class="row">
 
-        <!--  Necessary scripts  -->
-
-        <script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
-        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="assets/js/owl.carousel.js"></script>
-        <script type="text/javascript" src="assets/js/jquery.hoverdir.js"></script>
+        </div>
+    </div>
+</footer>
 
 
-        <!-- script for portfolio section using hoverdirection -->
-        <script type="text/javascript">
-            $(function() {
+<!-- footer-navigation start -->
+<nav class="hidden-xs hidden-sm navbar footer-nav" role="navigation">
+    <div class="container">
 
-                $('.portfolio-item > .item-image').each( function() { $(this).hoverdir({
-                    hoverDelay : 75
-                }); } );
+        <div class="navbar-header">
 
+            <!-- navbar logo -->
+            <div class="navbar-brand">
+                <span class="sr-only">&copy;Pymes Solutions</span>
+                <a target="_blank" href="http://pymes-solutions.com/paginaweb/">
+                    &copy;Pymes Solutions
+                </a>
+            </div>
+            <!-- navbar logo -->
+
+        </div><!-- /.navbar-header -->
+
+        <!-- nav links -->
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+            <ul class="nav navbar-nav navbar-right text-capitalize">
+                <li><a href="#fotos"><span>Fotos</span></a></li>
+                <li><a href="#servicios"><span>Servicios</span></a></li>
+                <li><a href="#precios"><span>Precios</span></a></li>
+                <li><a href="#reserva"><span>Reserva</span></a></li>
+
+            </ul>
+        </div><!-- nav links -->
+
+    </div><!-- /.container -->
+</nav>
+<!-- footer-navigation end -->
+
+
+
+
+   </div> <!-- end of /#home-page -->
+    <!--  Necessary scripts  -->
+
+    <script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.hoverdir.js"></script>
+
+
+    <!-- script for portfolio section using hoverdirection -->
+    <script type="text/javascript">
+        $(function() {
+
+            $('.portfolio-item > .item-image').each( function() { $(this).hoverdir({
+                hoverDelay : 75
+            }); } );
+
+        });
+    </script>
+
+
+    <!-- script for twitter-feed using owl carousel-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#twit").owlCarousel({
+
+                navigation : true, // Show next and prev buttons
+                slideSpeed : 100,
+                paginationSpeed : 400,
+                navigationText : false,
+                singleItem: true,
+                autoPlay: true,
+                pagination: false
             });
-        </script>
+
+        });
+    </script>
 
 
-        <!-- script for twitter-feed using owl carousel-->
-        <script type="text/javascript">
-            $(document).ready(function() {
+    <!-- script for testimonial section using owl carousel -->
+    <script type="text/javascript">
+        $(document).ready(function() {
 
-                $("#twit").owlCarousel({
+            $("#client-speech").owlCarousel({
 
-                    navigation : true, // Show next and prev buttons
-                    slideSpeed : 100,
-                    paginationSpeed : 400,
-                    navigationText : false,
-                    singleItem: true,
-                    autoPlay: true,
-                    pagination: false
-                });
-
+                autoPlay: 5000, //Set AutoPlay to 3 seconds
+                stopOnHover: true,
+                singleItem:true
             });
-        </script>
 
-
-        <!-- script for testimonial section using owl carousel -->
-        <script type="text/javascript">
-            $(document).ready(function() {
-
-                $("#client-speech").owlCarousel({
-
-                    autoPlay: 5000, //Set AutoPlay to 3 seconds
-                    stopOnHover: true,
-                    singleItem:true
-                });
-
-            });
-        </script>
+        });
+    </script>
 
 
     </body>
