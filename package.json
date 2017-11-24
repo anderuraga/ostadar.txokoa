@@ -1,0 +1,37 @@
+{
+  "name": "ostadar.txokoa",
+  "version": "1.0.0",
+  "description": "pagina web para txoko Ostadar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anderuraga/ostadar.txokoa.git"
+  },
+  "keywords": [
+    "web",
+    "html5",
+    "css3",
+    "boostrap",
+    "rwd",
+    "gulp"
+  ],
+  "author": "Ander Uraga Real",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anderuraga/ostadar.txokoa/issues"
+  },
+  "homepage": "https://github.com/anderuraga/ostadar.txokoa#readme",
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-install": "^1.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0",
+    "merge-stream": "^1.0.1"
+  }
+}
