@@ -28,6 +28,7 @@ gulp.task('html', function() {
                     'src/html/nav.html',
                     'src/html/wellcome.html',
                     'src/html/presentacion.html',
+                    'src/html/fotos.html',
                     'src/html/servicios.html',
                     'src/html/precios.html',
                     'src/html/reserva.html',
