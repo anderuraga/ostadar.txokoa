@@ -1510,3 +1510,12 @@ aside .tag-widget .tags a:hover {
 
 #normas li {
   list-style-type: circle; }
+
+#precios li {
+  list-style-type: circle;
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #BEBEBE; }
+
+#precios span {
+  font-weight: 600;
+  float: right; }
