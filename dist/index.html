@@ -26,6 +26,23 @@
         <!-- scripts -->
         <script type="text/javascript" src="assets/js/modernizr.custom.97074.js"></script>
 
+
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script>
+            function initialize() {
+                var mapCanvas = document.getElementById('map-canvas');
+                var mapOptions = {
+                    center: new google.maps.LatLng(43.293355, -2.994188),
+                    zoom: 18,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(mapCanvas, mapOptions)
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+
+
+
     </head>
 
     <body>
@@ -73,7 +90,10 @@
                                 <a href="#reserva"><span>Reserva</span></a>
                             </li>
                             <li>
-                                <a href="#normas"><span>Normas</span></a>
+                                <a href="#localizacion"><span>Localización</span></a>
+                            </li>
+                            <li>
+                                <a href="#normas" data-toggle="modal" data-target="#normas"><span>Normas</span></a>
                             </li>
                         </ul>
                     </div><!-- nav links -->
@@ -103,6 +123,7 @@
 <!-- /#header -->
 
 <div class="main-content">
+
     <!--  begin intro section -->
 
     <section id="presentacion" class="intro bg-light-gray">
@@ -561,30 +582,120 @@
 
 
 
-<section id="normas" class="bg-light-gray">
-
+<!-- begin localizacion section -->
+<section id="localizacion" class="bg-light-gray">
     <div class="container">
 
-        <div class="row">
-           <div class="col-md-12">
-                <h2 class="section-title">Normas de funcionamiento</h2>
+          <section class="g-map">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="google-map">
+                            <div id="map-canvas"></div>
+                        </div>
+                    </div>
+                </div>
+            </section> <!-- /.g-map (google-map end) -->
 
-                <p>Cuando realices tu reserva solicitaremos un anticipo de 50 eur para formalizar la reserva que serán descontados del precio final. Podrás hacerlo con transferencia bancaria o si te apetece nos vemos un día en Txokolore y nos lo entregas. Si deseas cancelar tu reserva y ya nos has entregado el anticipo, no te preocupes!, si nos avisas con más de 15 días de antelación a la fecha reservada se devuelve el anticipo entregado.</p>
 
-                <p>El día de la celebración os solicitaremos una fianza de 100 eur que os devolveremos cuando finalice vuestra fiesta.</p>
 
-               <ul>
-                   <li>Gracias por dejar el txoko recogido,  recuerda que no tendrás que fregar menaje ni barrer el suelo a no ser que tiréis confeti.</li>
-                   <li>Gracias por depositar las bolsas de basura en los contenedores.</li>
-                   <li>Gracias por recoger los adornos que has utilizado para vuestra celebración.</li>
-                   <li>No te olvides nada porque Txokolore no se hace responsable de los objetos perdidos aunque si te has dejado algo, te llamaremos.</li>
-                   <li>Y si tienes alguna duda, siempre estaremos encantados de escucharte.</li>
-                </ul>
-            </div>
-        </div>
+        <!-- contact adresses section begin -->
+        <section class="contact-address bg-white">
+            <div class="row">
 
-     </div>
+                <div class="col-md-4 col-xs-12">
+                    <div class="address-info">
+                        <div class="row">
+
+                            <div class="col-md-3 col-xs-3">
+                                <div class="address-info-icon text-center center-block bg-light-gray">
+                                    <i class="fa fa-map-marker"></i>
+                                </div> <!-- /.address-info-icon -->
+                            </div>
+
+                            <div class="col-md-9 col-xs-9 address-info-desc">
+                                <h3>Dirección</h3>
+                                <p>
+                                    Koffman Parklan, P.O Box 555 <br/>
+                                    StreetView, USA
+                                </p>
+                            </div> <!-- /.address-info-desc -->
+
+                        </div>
+                    </div> <!-- /.address-info -->
+                </div>
+
+                    <div class="col-md-4 col-xs-12">
+                        <div class="address-info">
+                            <div class="row">
+
+                                <div class="col-md-3 col-xs-3">
+                                    <div class="address-info-icon text-center center-block bg-light-gray">
+                                        <i class="fa fa-phone"></i>
+                                    </div> <!-- /.address-info-icon -->
+                                </div>
+
+                                <div class="col-md-9 col-xs-9 address-info-desc">
+                                    <h3>Teléfono</h3>
+                                    <p><a href="tel:688741820">688.741.820</a></p>
+                                </div> <!-- /.address-info-desc -->
+
+                            </div>
+                        </div> <!-- /.address-info -->
+                    </div>
+
+                    <div class="col-md-4 col-xs-12">
+                        <div class="address-info">
+                            <div class="row">
+
+                                <div class="col-md-3 col-xs-3">
+                                    <div class="address-info-icon text-center center-block bg-light-gray">
+                                        <i class="fa fa-envelope-o"></i>
+                                    </div> <!-- /.address-info-icon -->
+                                </div>
+
+                                <div class="col-md-9 col-xs-9 address-info-desc">
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:ostadar.txokoa@gmail.com">ostadar.txokoa@gmail.com</a></p>
+                                </div> <!-- /.address-info-desc -->
+
+                            </div>
+                        </div> <!-- /.address-info -->
+                    </div>
+
+                </div>
+            </section> <!-- /.contact-address -->
+
+
+    </div>
 </section>
+<!-- end of localizacion section -->
+
+<div id="normas" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Normas de funcionamiento</h4>
+      </div>
+      <div class="modal-body">
+            <p>Cuando realices tu reserva solicitaremos un anticipo de 50 eur para formalizar la reserva que serán descontados del precio final. Podrás hacerlo con transferencia bancaria o si te apetece nos vemos un día en Txokolore y nos lo entregas. Si deseas cancelar tu reserva y ya nos has entregado el anticipo, no te preocupes!, si nos avisas con más de 15 días de antelación a la fecha reservada se devuelve el anticipo entregado.</p>
+            <p>El día de la celebración os solicitaremos una fianza de 100 eur que os devolveremos cuando finalice vuestra fiesta.</p>
+            <ul>
+               <li>Gracias por dejar el txoko recogido,  recuerda que no tendrás que fregar menaje ni barrer el suelo a no ser que tiréis confeti.</li>
+               <li>Gracias por depositar las bolsas de basura en los contenedores.</li>
+               <li>Gracias por recoger los adornos que has utilizado para vuestra celebración.</li>
+               <li>No te olvides nada porque Txokolore no se hace responsable de los objetos perdidos aunque si te has dejado algo, te llamaremos.</li>
+               <li>Y si tienes alguna duda, siempre estaremos encantados de escucharte.</li>
+            </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
 
 
 

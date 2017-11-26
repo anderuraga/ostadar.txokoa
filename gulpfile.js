@@ -32,6 +32,7 @@ gulp.task('html', function() {
                     'src/html/servicios.html',
                     'src/html/precios.html',
                     'src/html/reserva.html',
+                    'src/html/localizacion.html',
                     'src/html/normas.html',
                     'src/html/footer.html'
                   ])
