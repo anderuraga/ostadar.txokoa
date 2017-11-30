@@ -7,6 +7,8 @@ var merge = require('merge-stream');
 var clean = require('gulp-clean');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
+var uncss = require('gulp-uncss');
+var nano = require('gulp-cssnano');
 
 //Tasks
 
@@ -26,7 +28,7 @@ gulp.task('html', function() {
     gulp.src([
                     'src/html/head.html',
                     'src/html/nav.html',
-                    'src/html/wellcome.html',
+                    //'src/html/wellcome.html',
                     'src/html/presentacion.html',
                     'src/html/fotos.html',
                     'src/html/servicios.html',
@@ -42,8 +44,13 @@ gulp.task('html', function() {
 
 
 gulp.task('move', function() {
-  gulp.src('src/assets/**.*')
-      .pipe(gulp.dest('./dist/'));
+  var taskAssets =  gulp.src('src/assets/**/**.*')
+                .pipe(gulp.dest('./dist/assets/'));
+
+  var taskImg = gulp.src('src/img/**.*')
+                    .pipe(gulp.dest('./dist/img/'));
+
+    return merge(taskAssets, taskImg);
 });
 
 
