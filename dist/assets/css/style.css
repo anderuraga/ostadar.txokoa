@@ -420,7 +420,8 @@ footer {
   background-color: #313131;
   color: #fff;
   font-size: 12px;
-  padding: 100px 0px; }
+  /* padding: 100px 0px; */
+  padding: 10px; }
 
 footer h4 {
   margin-top: 0px;
